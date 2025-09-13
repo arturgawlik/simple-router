@@ -1,0 +1,12 @@
+{
+  "name": "simple-simple-router",
+  "version": "0.0.1",
+  "description": "Simple node.js HTTP router with body and query parameters parsing.",
+  "license": "ISC",
+  "author": "Artur Gawlik",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "node --test --test-reporter dot"
+  }
+}
