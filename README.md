@@ -3,7 +3,7 @@ Very simple regex based node router with parsing body and query params.
 ### How to 
 #### Install
 ```bash
-npm install simple-router
+npm install simple-simple-router
 ```
 #### Use
 ```javascript
