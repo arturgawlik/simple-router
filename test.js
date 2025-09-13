@@ -5,16 +5,19 @@ import assert from 'node:assert';
 
 test('should call proper handler with parsed body and query params', async (t) => {
     let server;
+    let handlerCalled = false;
     await new Promise((res) => {
         server = createServer(sr({
             'some/test/path': (req, res) => {
                 assert.equal(req.body, 'this is body');
                 assert.deepEqual(req.params, { a: 'this is param' });
                 res.end();
+                handlerCalled = true;
             }
         }));
         server.listen(1234).on('listening', res);
     });
     await fetch(`http://localhost:1234/some/test/path?a=${decodeURIComponent('this is param')}`, { body: 'this is body', method: 'POST' });
     server.close();
+    assert(handlerCalled, 'path handler was not called');
 });
