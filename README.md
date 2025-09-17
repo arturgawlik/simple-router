@@ -1,5 +1,5 @@
 ### What is it
-Very simple regex based node router with parsing body and query params.
+Very simple regex based node router with parsing body and query params. Router that I'm using for my toy node.js servers.
 ### How to 
 #### Install
 ```bash
